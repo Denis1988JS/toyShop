@@ -1,0 +1,39 @@
+{% extends 'shopapp/base.html' %}
+
+{% block content %}
+<main class="main">
+<h2 class="h2Header">Our Catalog</h2>
+
+{% for catGroup in cat %}
+<div class="blockWithCat">
+	<div class="headerCatalogBlock">
+		<div class="headerCatalogBlockImg"><img src="{{catGroup.photo.url}}" alt="{{catGroup.name}}"></div>
+		<div class="categoryName">{{catGroup.name}}</div>
+	</div>
+	<hr>
+	<div class="productsCats productsCatsCatalog">
+	{% for product in catGroup.product_set.all %}
+	{% if product.is_sells %}
+	<div class="cartBlock cartBlockCat">
+		<img src="{{ product.photo.url }}" alt="{{product.name}}">
+		<p><a href="{% url 'product' product.slug  %}">{{product.name}}</a></p>
+		<div class="priceBlock">
+			{% if request.user.is_authenticated %}
+				<form action="{% url 'mybasket' product.id %}" method="POST" class="buyForm" enctype="multipart/form-data">
+					{% csrf_token %}
+					{{form.countProduct}}
+					<input type="submit" value="Купить $ {{product.price}} USD" class="btnSubmit"></input>
+				</form>
+			{% else %}
+			<p>{{product.price}}</p>
+			{% endif %}
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+	</div>
+</div>
+{% endfor %}
+
+</main>	
+{% endblock content %}

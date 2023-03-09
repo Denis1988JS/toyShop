@@ -1,0 +1,17 @@
+{% extends 'shopapp/base.html' %}
+{% block content %}
+<main class="main">
+	<div class="review">
+		<h2>Добавить отзыв о товаре {{title}}</h2>
+		<form action="#" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p><label class="form-label" for="{{form.reviewText.id_for_label}}">{{form.reviewText.label}}:</label></p>
+			<div>
+				{{form.reviewText}}
+			</div>
+			<div class="form-error">{{form.reviewText.errors}}</div>
+			<button type="submit"  class="rewSub">Оставить отзыв</button>
+		</form>
+	</div>
+</main>
+{% endblock content %}

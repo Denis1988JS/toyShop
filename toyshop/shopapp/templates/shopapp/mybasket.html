@@ -1,0 +1,30 @@
+{% extends 'shopapp/base.html' %}
+{% block content %}
+<main class="basketContainer">
+	<section class="basketInfo">
+		<h1>Корзина покупок пользователя {{user}}</h1>
+		<div>
+			<table class="table">
+				<tr>
+					<th>Название товара</th>
+					<th>Цена за ед</th>
+					<th>Количество</th>
+					<th>Сумма</th>
+				</tr>
+			{% for product in user.basket_set.all %}
+				<tr>
+					<td>{{product.product}}</td>
+					<td>{{product.priceProduct}}</td>
+					<td>{{product.countProduct}}</td>
+					<td>{{product.fullSumm}}</td>
+					<td><a href="{% url 'dellbasket' product.id %}">Удалить</a></td>
+					<td><a href="#">Купить</a></td>
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+	</section>
+</main>
+
+
+{% endblock content %}

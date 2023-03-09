@@ -1,0 +1,34 @@
+{% extends 'shopapp/base.html' %}
+{% block content %}
+<main class="main">
+	<div class="cartBlockProducts">
+		<div class="leftCartBlockProducts">
+			<img src="{{ product.photo.url }}" alt="{{product.name}}" alt="">
+		</div>
+		<div class="rightCartBlockProducts">
+			<h2>{{product.category}}</h2>
+			<p>{{product.name}}</p>
+			<p>${{product.price}} USD</p>
+		</div>
+		{% if request.user.is_authenticated %}
+		<p><a href="{% url 'review' product.slug %}">Оставить отзыв о товаре </a></p>
+		{% else %}
+		<p>Для того, чтобы оставить отзыв о нашем товаре - <a href="{% url 'login' %}">АВТОРИЗУЙТЕСЬ</a></p>
+		{% endif %}
+	</div>
+	<div class="blockCommentsGoods">
+			{% for comments in product.review_set.all %}
+			<div class="divComments">
+				<p>Комментарий от пользователя: {{ comments.user }} от: {{ comments.time_create }}</p>
+				<p>{{ comments.reviewText }}</p>
+			</div>
+			<hr>
+			{% empty %}
+			<div class="divComments">
+			<p>Комментариев на данный момент нет</з>
+			</div>	
+			{% endfor %}
+		</ul>
+	</div>
+</main>
+{% endblock content %}

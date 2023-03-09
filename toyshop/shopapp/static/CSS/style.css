@@ -1,0 +1,833 @@
+/*обнуление стилей*/
+
+.wrapper {
+	width: 1440px;
+	margin: 0px auto;
+	position: relative;
+}
+a {
+	color: #fff;
+}
+/*Шрифты*/
+
+/*Стилизация блока Header*/
+.header {
+	width: 100%;
+	height: auto;
+}
+.firstHeader {
+	width: 100%;
+	height: 32px;
+	background-color: #A5C926;
+}
+.contact_block {
+	width: 1200px;
+	height: 100%;
+	margin: 0px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 15px;
+}
+.tell_email {
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.phone, .email {
+	font-family: Open Sans;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #fff;
+}
+.phone  {
+	margin-right: 16px;
+}
+.links {
+	flex-basis: 70%;
+}
+.linksUl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.secondHeader {
+	width: 100%;
+	height: 72px;
+	display: flex;
+	align-items: center;
+}
+.linksBlock {
+	margin: 0px auto;
+	width: 1200px;
+	padding: 0px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logoLink {
+	font-family: Varela Round;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: black;
+}
+.navUl {
+	display: flex;
+	align-items: center;
+}
+.navLinks {
+	margin: 0px 18px;
+}
+.navLinks a {
+	color: black;
+}
+.basketUl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.basketLi {
+	margin: 0px 10px;
+	padding: 7px;
+	text-align: center;
+}
+.userLi {
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: #FFC12C;
+	color: white;
+	font-weight: 600;
+}
+.basketLi a {
+	font-family: Open Sans;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: black;
+}
+
+/*footer сайта*/
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: #A5C926;
+}
+.footerLinks {
+	margin: 0px auto;
+	width: 1200px;
+	height: 128px;
+	border-bottom: 1px solid white;
+	display: flex;
+	align-items: center;
+}
+.footerLinks, .footerLinks a{
+	color: #fff;
+}
+.aboutSite {
+	width: 1200px;
+	height: auto;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.aboutSite h3 {
+	padding: 25px 0px;
+	color: #fff;
+}
+
+/*Верстка contenta - главной страницы*/
+.main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Webflow {
+	width: 100%;
+	height: 640px;
+	background-image: url('../IMG/bdWebflow.jpg');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.freeEcommerce {
+	width: 570px;
+	height: 308px;
+	background-color: #fff;
+	border-radius: 16px;
+}
+.freeEcommerce p{
+	margin-top: 50px;
+	text-align: center;
+	color: rgba(165, 201, 38, 1);
+	font-family: Open Sans;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+}
+.freeEcommerce h2 {
+	margin: 20px auto;
+	font-family: Varela Round;
+	font-size: 39px;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: 0em;
+	max-width: 416px;
+	text-align: center;
+}
+.linkCatalog {
+	margin: 0px auto;
+	width: 153px;
+	border-radius: 48px;
+	background-color: #A5C926;
+	padding: 12px 0px;
+	text-align: center;
+}
+.linkCatalog a {
+	font-family: Open Sans;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+}
+/*Блок с ссылками на категории*/
+.catLinks {
+	width: 100%;
+	height: 460px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.catsBlock {
+	width: 570px;
+	height: 188px;
+	background-color: #FFC12C;
+	margin-right: 30px;
+	position: relative;
+	padding-top: 50px;
+	border-radius: 16px;
+}
+.catsBlock h2 {
+	font-family: Varela Round;
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 0em;
+	padding-left: 50px;
+	text-align: center;
+	color: #fff;
+}
+.catLink {
+	height: 40px;
+	width: 112px;
+	border-radius: 15px;
+	background-color: #fff;
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.catLink a {
+	color: black;
+	font-family: Open Sans;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+}
+.imgCat {
+	position: absolute;
+	top: -60px;
+	left: 20px;
+}
+/*Блок с товарами*/
+.blockProducts {
+	width: 100%;
+	height: auto;
+}
+.wooden, .stuffed {
+	padding-bottom: 50px;
+}
+.headerStuffedBlock {
+	display: flex;
+	width: 100%;
+	height: 70px;
+	justify-content: space-between;
+	border-bottom: 3px solid #DDDDDD;
+	margin-bottom: 25px;
+	position: relative;
+}
+.headerStuffedBlock::after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	width: 30%;
+	height: 3px;
+	background-color: #A5C926;
+}
+.headerStuffedBlock h2 {
+	font-family: Varela Round;
+		font-size: 28px;
+		font-weight: 400;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: left;
+}
+.linkProductCat {
+	width: 97px;
+	height: 26px;
+	padding-top: 4px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.linkProductCat a {
+	color: black;
+	font-family: Open Sans;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: left;
+}
+.linkProductCat a::after {
+	content: '';
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url('../IMG/arrow-right-mini-icon.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: bottom left;
+	margin-left: 5px;
+}
+.productsCats {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cartBlock {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 270px;
+	height: 328px;
+	background-color: #F8F8F8;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+}
+.cartBlock:hover {
+	border-radius: 10px;
+		background: rgb(100, 100, 100) radial-gradient(circle at 50% 0, rgba(255, 255, 255, .65), rgba(255, 255, 255, .35));
+		box-shadow:
+			inset rgba(0, 0, 0, .6) 0 -3px 8px,
+			inset rgba(252, 255, 255, .7) 0 3px 8px,
+			rgba(0, 0, 0, .8) 0 3px 8px -3px;
+}
+.cartBlock p{
+	margin: 15px auto;
+	font-family: Varela Round;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: center;
+}
+.priceBlock {
+	height: 24px;
+	width: 172px;
+	border-radius: 16px;
+	text-align: center;
+}
+.priceBlock input {
+	width: 30%;
+	margin-bottom: 7px;
+}
+/*Видео блок*/
+.videoBlock {
+	width: 100%;
+	height: auto;
+}
+.videoDiv {
+	width: 1200px;
+	height: a;
+	margin: 0px auto;
+}
+
+/*Блок с рекламой Webflow*/
+.webflow {
+	width: 100%;
+	height: auto;
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.madeWebflow {
+	width: 1200px;
+	height: auto;
+	margin: 0px auto;
+}
+.madeWebflowHeader {
+	width: 600px;
+	height: auto;
+	margin: 0px auto 80px;
+
+}
+.madeWebflowHeader p {
+	font-family: Open Sans;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: #A5C926;
+}
+.madeWebflowHeader h2 {
+	font-family: Varela Round;
+	font-size: 31px;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.blockFree {
+	width: 1200px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.leftblockFree h2 {
+	margin-top: 80px;
+	font-family: Varela Round;
+		font-size: 31px;
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 0em;
+		text-align: left;
+}
+.leftblockFree h2::after {
+	content: '';
+	display: block;
+	width: 70px;
+	height: 2px;
+	background-color: #A5C926;
+	margin-top: 25px;
+}
+.leftblockFree p {
+	max-width: 450px;
+	height: auto;
+	margin: 25px 0px 25px 0px;
+	font-family: Open Sans;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: rgba(153, 153, 153, 1);
+}
+.freeBtn {
+	width: 153px;
+	border-radius: 48px;
+	background-color: #A5C926;
+	padding: 12px 0px;
+	text-align: center;
+	color: #fff;
+}
+.subscribeBlock {
+	width: 100%;
+	height: auto;
+}
+.subscribe {
+	padding: 0px 12px;
+	margin: 0px auto;
+	width: 1200px;
+	height: 176px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(248, 248, 248, 1);
+}
+.leftBlocksubscribe{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.leftBlocksubscribe h3 {
+	margin-left: 20px;
+	max-width: 310px;
+	font-family: Varela Round;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+.leftBlocksubscribe span {
+	font-family: Varela Round;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: #A5C926;
+}
+/*Форма на скидку*/
+.form-inline {
+	display: flex;
+	justify-content: space-between;
+}
+.form-inline input {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*Блок instagram*/
+.elasticThemes {
+	width: 100%;
+	height: 694px;
+}
+.blockelasticThemes {
+	width: 1200px;
+	height: auto;
+	margin: 0px auto;
+}
+.blockelasticThemes p {
+	padding-top: 120px;
+	font-family: Open Sans;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: #A5C926;
+}
+.blockelasticThemes h2 {
+	font-family: Varela Round;
+	font-size: 31px;
+	font-weight: 400;
+	line-height: 40px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.elasticPhoto {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 85px;
+}
+.morePhotos {
+	margin: 70px auto 0px;
+	width: 173px;
+	height: 48px;
+	border-radius: 48px;
+	background-color: #A5C926;
+	padding: 16px 0px;
+	text-align: center;
+}
+
+
+/*Страница каталог товаров - главный блок*/
+
+.main {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.h2Header {
+	font-family: Varela Round;
+	font-size: 39px;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: 0em;
+	max-width: 416px;
+	text-align: center;
+}
+.blockWithCat {
+	width: 1300px;
+	height: auto;
+	background-color: #FFC12C;
+	border-radius: 16px;
+	margin: 25px 0px;
+}
+.headerCatalogBlock {
+	width: 100%;
+	min-height: 100px;
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 15px;
+}
+hr {
+	margin: 25px auto;
+}
+.headerCatalogBlockImg {
+	position: relative;
+	width: 20%;
+	height: 50px;
+	
+}
+.headerCatalogBlock img {
+	position: absolute;
+	width: 185px;
+	height: 185px;
+	top: -75px;
+	left: -90px;
+}
+.categoryName {
+	font-family: Varela Round;
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 0em;
+	padding-left: 50px;
+	text-align: center;
+	color: #fff;
+}
+.cartBlockCat {
+	background-color: #FFC12C;
+}
+.cartBlockCat:hover {
+	border-radius: 10px;
+	background: #A5C926 radial-gradient(circle at 50% 0, rgba(162, 216, 61, 0.65), rgba(55, 165, 4, 0.35));
+	box-shadow:
+		inset rgba(0, 0, 0, .6) 0 -3px 8px,
+		inset rgba(252, 255, 255, .7) 0 3px 8px,
+		rgba(0, 0, 0, .8) 0 3px 8px -3px;
+}
+.productsCatsCatalog {
+	padding: 0px 10px;
+}
+.buyForm {
+	background-color: #A5C926;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 8px;
+}
+.buyForm:hover {
+	background-color: #FFC12C;
+}
+
+.btnSubmit {
+	background-color: inherit;
+	color: white;
+	font-weight: 600;
+}
+/*Страница товары в разрезе категории*/
+.catProducts {
+	margin: 50px auto;
+}
+/*Страница карточка товара*/
+.cartBlockProducts {
+	width: 1200px;
+	height: fit-content;
+	padding: 15px 15px;
+	background-color: #FFC12C;
+	margin: 25px auto;
+	border: 1px solid gray;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.rightCartBlockProducts h2 {
+	font-family: Varela Round;
+		font-size: 27px;
+		font-weight: 400;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: center;
+}
+.rightCartBlockProducts p {
+	font-family: Open Sans;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+		
+}
+.review {
+	margin: 25px auto;
+	width: 1200px;
+	border: 1px solid gray;
+}
+.review h2 {
+	font-family: Varela Round;
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 0em;
+	text-align: center;
+}
+.review form {
+	margin: 15px auto;
+	width: 35%;
+	height: auto;
+	border: 1px solid gray;
+	padding: 15px;
+	background-color: #A5C926;
+}
+
+.review label {
+	margin: 15px auto;
+}
+.rewSub {
+	margin: 15px auto;
+	width: 35%;
+	height: 28px;
+	text-align: center;
+	background-color: #FFC12C;
+	color: black;
+}
+.blockCommentsGoods {
+	width: 1200px;
+	height: fit-content;
+	padding: 15px 15px;
+	background-color: #FFC12C;
+	margin: 25px auto;
+	border: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.divComments {
+	width: 90%;
+	margin: 10px auto;
+	padding: 5px;
+	background-color: cadetblue;
+}
+
+/*Блок доработка стилей */
+.cartBlockA {
+	color: black;
+}
+/*Страница авторизация пользователя с формой */
+.regH {
+	width: 100%;
+	text-align: center;
+	font-family: Varela Round;
+		font-size: 39px;
+		font-weight: 400;
+		line-height: 48px;
+		letter-spacing: 0em;
+		text-align: center;
+		color: black;
+		background-color: #A5C926;
+}
+.regUserForm {
+	width: auto;
+	height: auto;
+	margin: 25px auto;
+	border: 1px solid grey;
+	border-radius: 13px;
+	padding: 15px;
+	background-color: #FFC12C;
+}
+.form-input {
+	width: 100%;
+	height: 30px;
+	border: 1px solid green;
+	border-radius: 13px;
+	text-align: center;
+}
+.divForm {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	margin: 15px auto;
+	text-align: center;
+}
+.regSubmit, .regReset {
+	width: 80%;
+	height: 30px;
+	border: 1px solid green;
+		border-radius: 13px;
+		text-align: center;
+}
+/*Страница о нас*/
+.aboutUs {
+	width: 1200px;
+	height: fit-content;
+	padding: 15px 15px;
+	background-color: #FFC12C;
+	margin: 25px auto;
+	border: 1px solid gray;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.aboutUs li {
+	margin: 15px 0px;
+	color: blue;
+	font-size: 24px;
+	font-family: Varela Round;
+}
+/*Блок корзина покупок*/
+.basketBlock {
+	position: fixed;
+	padding-right: 15px;
+	right: 0;
+	top: 0;
+	min-width: 100px;
+	height: fit-content;
+	background-color: #FFC12C;
+	overflow: scroll;
+}
+/*Страница корзина покупок*/
+
+.basketContainer {
+	max-width: 100%;
+	height: auto;
+}
+.basketContainer h1 {
+	text-align: center;
+}
+.basketInfo {
+	width: 1200px;
+	height: fit-content;
+	margin: 15px auto;
+	background-color: #FFC12C;
+}
+.table {
+	width: 100%;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.table thead th {
+	padding: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: left;
+	color: #444441;
+	border-top: 2px solid #716561;
+	border-bottom: 2px solid #716561;
+}
+
+.table tbody td {
+	padding: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #444441;
+	border-top: 1px solid #716561;
+}

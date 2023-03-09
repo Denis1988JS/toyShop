@@ -1,0 +1,19 @@
+{% extends 'shopapp/base.html' %}
+
+{% block content %}
+<main class="main">
+	<h2 class="regH">Авторизация пользователя</h2>
+	<form action="{% url 'login' %}" method="post" class="regUserForm">
+		{% csrf_token %}
+		<p><label class="form-label" for="{{form.username.id_for_label}}">{{form.username.label}}:</label>{{form.username}}</p>
+		<div class="form-error">{{form.username.errors}}</div>
+		
+		<p><label class="form-label" for="{{form.password.id_for_label}}">{{form.password.label}}:</label>{{form.password}}
+		</p>
+		<div class="form-error">{{form.password1.errors}}</div>
+	<div class="divForm">
+		<input type="submit" class="regSubmit" value="Авторизация"></input>
+	</div>
+	</form>
+</main>
+{% endblock content %}

@@ -1,0 +1,143 @@
+{% extends 'shopapp/base.html' %}
+{% load static %}
+	{% block content %}
+	<main class="main">
+		<section class="Webflow">
+			<div class="freeEcommerce">
+				<p>Say Hello to ToyStore!</p>
+				<h2>Free Ecommerce Template for Webflow</h2>
+				<div class="linkCatalog">
+					<a href="{% url 'catalog' %}" target="_blank">Open Catalog</a>
+				</div>
+			</div>
+		</section>
+		<section class="catLinks">
+			{% for cat in category %}
+			<div class="catsBlock">
+				<h2>{{cat.name}}</h2>
+				<div class="catLink">
+					<a href="{{ cat.get_absolute_url }}">Show More</a>
+				</div>
+				<div class="imgCat">
+					<img src="{{ cat.photo.url }}" alt="{{cat.name}}">
+				</div>
+			</div>
+			{% endfor %}
+		</section>
+		<section class="blockProducts">
+			<div class="stuffed">
+				<div class="headerStuffedBlock">
+					<h2>Stuffed Animals</h2>
+					<div class="linkProductCat">
+						<!--Тут ссылка на все товары группы-->
+						<a href="#">See All Toys</a>
+					</div>
+				</div>
+				<div class="productsCats">
+					{% for p in productsStaff %}
+					<div class="cartBlock">
+						<img src="{{ p.photo.url }}" alt="{{p.name}}">
+						<p><a class="cartBlockA" href="{% url 'product' p.slug  %}">{{p.name}}</a></p>
+						<div>
+							<p>$ {{p.price}} USD</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="wooden">
+				<div class="headerStuffedBlock">
+					<h2>Wooden Toys</h2>
+					<div class="linkProductCat">
+						<!--Тут ссылка на все товары группы-->
+						<a href="#">See All Toys</a>
+					</div>
+				</div>
+				<div class="productsCats">
+					{% for p in productsWooden %}
+					<div class="cartBlock">
+						<img src="{{ p.photo.url }}" alt="{{p.name}}">
+						<p>{{p.name}}</p>
+						<div class="priceBlock">
+							<p>$ {{p.price}} USD</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		<section class="videoBlock">
+			<div class="videoDiv">
+				<!--
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/D1b_t0O87F0"
+					title="Никогда в Жизни не Покупайте Детям Эти Игрушки! Топ 50" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>-->
+			</div>
+		</section>
+		<section class="webflow">
+			<div class="madeWebflow">
+				<div class="madeWebflowHeader">
+					<p>Made for Webflow</p>
+					<h2>Simple & Colorful Ecommerce Template for Your Business</h2>
+				</div>
+				<div class="blockFree">
+					<div class="leftblockFree">
+						<h2>Available for FREE!</h2>
+						<p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is
+						difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write
+						perfect ad copy</p>
+						<div class="freeBtn">
+							<span>GET IT NOW!</span>
+						</div>
+					</div>
+					<div class="rightblockFree">
+						<img src="{% static 'IMG/freeTitleImg.png' %}" alt="freeTitleImg">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribeBlock">
+			<div class="subscribe">
+				<div class="leftBlocksubscribe">
+					<a href="#"><img src="{% static 'IMG/links/telegramm.png' %}" alt="Телега"></a>
+					<h3>Subscribe to our newsletter & get <span>10% discount!</span></h3>
+				</div>
+				<div class="rightBlocksubscribe">
+					<form action="{% url 'home' %}" method="post" role="form" class="form-inline" name="subscribeForm">
+						{% csrf_token %}
+						<div class="form-group">
+							<label class="form-label" for="{{form.name.id_for_label}}">{{form.name.label}}:</label>{{form.name}}
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="{{form.email.id_for_label}}">{{form.email.label}}:</label>{{form.email}}
+							
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="{{form.tell.id_for_label}}">{{form.tell.label}}:</label>{{form.tell}}
+							<div class="form-error">{{form.tell.errors}}</div>
+						</div>
+						<input type="submit" class="btn btn-success" value="Подписаться на скидку"></input>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="elasticThemes">
+			<div class="blockelasticThemes">
+				<p>@ElasticThemes</p>
+				<h2>We're on Instagram!</h2>
+				<div class="elasticPhoto">
+					<img src="{% static 'IMG/f1.png' %}" alt="Фото">
+					<img src="{% static 'IMG/f2.png' %}" alt="Фото">
+					<img src="{% static 'IMG/f3.png' %}" alt="Фото">
+					<img src="{% static 'IMG/f4.png' %}" alt="Фото">
+					<img src="{% static 'IMG/f5.png' %}" alt="Фото">
+					<img src="{% static 'IMG/f6.png' %}" alt="Фото">
+				</div>
+			</div>
+			<div class="morePhotos">
+				<a href="#">See More Photos</a>
+			</div>
+		</section>
+	</main>
+	{% endblock content %}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Varela+Round&display=swap"
+		rel="stylesheet">
+
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link type="text/css" href="{% static 'CSS/min_style.css' %}" rel="stylesheet" />
+	<link type="text/css" href="{% static 'CSS/style.css' %}" rel="stylesheet" />
+	<title>{{title}}</title>
+</head>
+<body>
+	<div class="wrapper">
+		{% block header %}
+		<div>
+			{% for i in basket %}
+			<p>{{i}}</p>
+			{% endfor %}
+		</div>
+		<Header class="header">
+			<div class="firstHeader">
+				<div class="contact_block">
+					<div class="tell_email">
+						<p class="phone">Call Us: <a href="tel:+ 12139745898">+1 213 974-5898</a></p>
+						<p class="email">Email: <a href="mailto:toystore@template.com">toystore@template.com</a></p>
+					</div>
+					<div class="links_soc">
+						<ul class="linksUl">
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/twitter.svg' %}" alt="Твиттер"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/facebook.svg' %}" alt="Фэйсбук"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/insta.svg' %}" alt="Инста"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/drobe.svg' %}" alt="Пинтерест"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/yourtube.svg' %}" alt="Ютуб"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="secondHeader">
+				<div class="linksBlock">
+					<div class="logo">
+						<a href="{% url 'home' %}" class="logoLink">ToyStore</a>
+					</div>
+					<nav class="links">
+						<ul class="navUl">
+							<!--Тут реализовать ссылки на страницы -->
+							<li class="navLinks"><a href="{% url 'catalog' %}"  target="_blank">Catalog</a></li>
+							<li class="navLinks"><a href="#">Delivery</a></li>
+							<li class="navLinks"><a href="{% url 'about' %}">About</a></li>
+							<li class="navLinks"><a href="#">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="basket">
+						{% if request.user.is_authenticated %}
+						<ul class="basketUl">
+							<li class="basketLi">Cart</li>
+							<li class="basketLi"><a href="{% url 'basket' %}"><img src="{% static 'IMG/links/basket.svg' %}" alt="Корзина"></a></li>
+							<li class="basketLi userLi">{{user|capfirst}}</li>
+							<li class="basketLi"><a href="{% url 'logout' %}">Выйти</a></li>
+						</ul>
+						{% else %}
+						<ul class="basketUl">
+							<li class="basketLi"><a href="{% url 'register' %}">Регистрация</a></li>
+							<li class="basketLi"><a href="{% url 'login' %}">Авторизация</a></li>
+						</ul>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</Header>	
+		{% endblock header %}
+		
+		{% block content %}
+		{% endblock content %}
+
+		{% block footer %}
+		<footer class="footer">
+			<div class="footerLinks">
+				<div class="linksBlock">
+					<div class="logo">
+						<a href="{% url 'home' %}" class="logoLink">ToyStore</a>
+					</div>
+					<nav class="liks">
+						<ul class="navUl">
+							<!--Тут реализовать ссылки на страницы -->
+							<li class="navLinks"><a href="{% url 'catalog' %}">Catalog</a></li>
+							<li class="navLinks"><a href="#">Delivery</a></li>
+							<li class="navLinks"><a href="{% url 'about' %}">About</a></li>
+							<li class="navLinks"><a href="#">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="links_soc">
+						<ul class="linksUl">
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/twitter.svg' %}" alt="Твиттер"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/facebook.svg' %}" alt="Фэйсбук"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/insta.svg' %}" alt="Инста"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/drobe.svg' %}" alt="Пинтерест"></a></li>
+							<li class="links_item"><a href="#"><img src="{% static 'IMG/links/yourtube.svg' %}" alt="Ютуб"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<div class="aboutSite">
+				<h3>
+					<address>
+						Данный сайт (макет сайта) сделан для практики по верстке, js-кодированию и python(Django) - программированию
+					</address> 
+				</h3>
+			</div>
+		</footer>	
+		{% endblock footer %}
+
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<script src="{% static 'JS/script.js' %}"></script>
+</body>
+</html>
